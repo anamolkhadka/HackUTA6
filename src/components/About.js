@@ -13,14 +13,14 @@ function About(){
     
             <h2>Key Features</h2>
             <ul>
-                <li><strong>Stock Search:</strong> Quickly search for stocks by ticker symbol or company name.</li>
+                <li><strong>Stock Search:</strong> Quickly search for stocks by ticker symbol.</li>
                 <li><strong>Stock List:</strong> Customize your own stock list and view essential stock data such as daily changes, symbol, and price.</li>
                 <li><strong>Stock Details:</strong> Dive deep into stock data, including charts, technical indicators like moving averages, RSI, and more.</li>
                 <li><strong>Firebase Integration:</strong> Your stock list is saved and persisted across sessions using Firebase Firestore, ensuring real-time data retrieval.</li>
                 <li><strong>Real-time Data:</strong> Fetch live or delayed stock data depending on your API plan with Polygon.io.</li>
             </ul>
     
-            <h2>Supported Stock Symbols</h2>
+            <h2>Supports most of the US based Stock Symbols</h2>
             <p> Here are some popular stock symbols you can explore </p>
             <ul>
                 <li>AAPL – Apple Inc.</li>

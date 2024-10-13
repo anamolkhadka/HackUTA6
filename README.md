@@ -8,7 +8,7 @@ The **Stock Analyzer Web App** is a simple, intuitive tool designed to help user
 
 ## Features
 
-- **Stock Search**: Search for stocks by ticker symbol or company name.
+- **Stock Search**: Search for stocks by ticker symbol.
 - **Stock List**: Add stocks to a customizable list and view basic information (symbol, price, daily change, etc.).
 - **Stock Details**: Click on a stock in the list to view detailed information, including charts and technical indicators (e.g., moving averages, RSI).
 - **Firebase Integration**: Stock data is stored in Firebase Firestore, ensuring persistent, real-time data storage and retrieval across sessions.
