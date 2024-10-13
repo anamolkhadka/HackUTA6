@@ -1,0 +1,57 @@
+/* NavScroll.css */
+.navbar-custom {
+    background-color: #121212 !important; /* Dark background */
+}
+
+.navbar-items {
+    color: #fff !important; /* Ensure the text is white */
+}
+
+/* Override Nav.Link to ensure white text */
+.navbar-items .nav-link {
+    color: #fff !important;
+}
+
+.navbar-items .nav-link:hover {
+    color: #ccc !important; /* Lighter color on hover */
+}
+
+/* Single class for search box container */
+.search-box {
+    display: flex;
+    flex-wrap: wrap;          /* Allow the input and button to wrap */
+    align-items: center;
+    justify-content: center;
+    width: 100%;              /* Ensure the container takes the full width */
+}
+
+/* Search input styling */
+.search-box .form-control {
+    flex-grow: 1;             /* Make the input take available space */
+    flex-shrink: 1;           /* Allow it to shrink on smaller screens */
+    max-width: 400px;         /* Limit the maximum width to 400px */
+    width: 100%;              /* Take full width on small screens */
+}
+
+/* Search button styling */
+.search-box button {
+    flex-shrink: 0;             /* Prevent the button from shrinking */
+    width: auto;                /* Keep the button at its natural width */
+    margin-left: 10px;          /* Add spacing between input and button */
+    height: 100%;               /* Ensure the button matches the input's height */
+}
+
+/* Customize the Navbar Toggle button */
+.navbar-toggler {
+    border-color: #fff !important;  /* White border for better visibility */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;  /* White icon for the toggle button */
+}
+
+/* You can also add hover effects */
+.navbar-toggler:hover {
+    background-color: #333 !important; /* Darker background on hover */
+    border-color: #ccc !important;     /* Lighter border on hover */
+}
