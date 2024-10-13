@@ -32,6 +32,7 @@ The **Stock Analyzer Web App** is a simple, intuitive tool designed to help user
 - **State Management**: React's useState and useEffect hooks for managing UI state.
 - **Database**: Firebase Firestore is used to store stock data in a persistent, real-time database, ensuring that data is available across sessions and devices.
 - **Environment Variables**: The .env file is used for securely storing sensitive data like API keys.
+- **Web Hosting**: Vercel
 
 
 ## Installation
