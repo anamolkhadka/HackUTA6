@@ -7,12 +7,8 @@ import Modal from "react-bootstrap/Modal";
 const API_URL = "https://api.polygon.io/v3/reference/tickers"
 const API_KEY = "19T3x8ImOxdXlhCqArDPanS2IIlSBDrG"
 
-/* 
-Example API request: https://api.polygon.io/v3/reference/tickers/AAPL?apiKey=19T3x8ImOxdXlhCqArDPanS2IIlSBDrG
-*/
 
-
-function Home({ search, setSearch, companies, addCompany}){
+function Home({ search, setSearch, companies, addCompany, deleteCompany}){
     console.log(companies);
     const [companyDetails, setCompanyDetails] = useState(null);
     const [showModal, setShowModal] = useState(false);  // State to control modal visibility
@@ -86,6 +82,8 @@ function Home({ search, setSearch, companies, addCompany}){
                         <th>State</th>
                         <th>Market</th>
                         <th>Market Cap</th>
+                        <th>Detail</th>
+                        <th>Delete</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -104,11 +102,19 @@ function Home({ search, setSearch, companies, addCompany}){
                                     ? `$${company.market_cap.toLocaleString()}`
                                     : 'N/A'}
                                 </td>
+                                <td>
+                                    <Button variant="dark">View</Button>
+                                </td>
+                                <td>
+                                    <Button variant="dark" onClick={ () => deleteCompany(company.ticker)}>
+                                        Remove 
+                                    </Button>
+                                </td>
                             </tr>
                         ))
                     ) : (
                         <tr>
-                            <td colSpan="8" style={{ textAlign: "center" }}>No companies added yet</td>
+                            <td colSpan="10" style={{ textAlign: "center" }}>No companies added yet</td>
                         </tr>
                     )};
                     
@@ -142,7 +148,7 @@ function Home({ search, setSearch, companies, addCompany}){
                         Close
                         </Button>
                     ) : (
-                        <Button variant="success" onClick={handleAddCompany}>
+                        <Button variant="dark" onClick={handleAddCompany}>
                         Add to List
                         </Button>
                     )}
