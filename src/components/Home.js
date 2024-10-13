@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import axios from "axios";
 import Table from "react-bootstrap/Table";
 import Modal from "react-bootstrap/Modal";
+import { useNavigate } from "react-router-dom";
 
 const API_URL = "https://api.polygon.io/v3/reference/tickers"
 const API_KEY = "19T3x8ImOxdXlhCqArDPanS2IIlSBDrG"
@@ -13,6 +14,12 @@ function Home({ search, setSearch, companies, addCompany, deleteCompany}){
     const [companyDetails, setCompanyDetails] = useState(null);
     const [showModal, setShowModal] = useState(false);  // State to control modal visibility
     const [error, setError] = useState(null);  // State to store any error messages
+    const navigate = useNavigate(); // Initialize useNavigate
+
+    // Function to navigate to StockDetails page with ticker
+    const handleViewCompany = (ticker) => {
+        navigate(`/stock/${ticker}`);  // Navigate to /stock/ticker
+    };
 
     // Handle closing the modal
     const handleClose = () => {
@@ -103,7 +110,7 @@ function Home({ search, setSearch, companies, addCompany, deleteCompany}){
                                     : 'N/A'}
                                 </td>
                                 <td>
-                                    <Button variant="dark">View</Button>
+                                    <Button variant="dark" onClick={ () => handleViewCompany(company.ticker)}>View</Button>
                                 </td>
                                 <td>
                                     <Button variant="dark" onClick={ () => deleteCompany(company.ticker)}>
