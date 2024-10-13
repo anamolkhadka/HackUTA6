@@ -11,7 +11,7 @@ The **Stock Analyzer Web App** is a simple, intuitive tool designed to help user
 - **Stock Search**: Search for stocks by ticker symbol or company name.
 - **Stock List**: Add stocks to a customizable list and view basic information (symbol, price, daily change, etc.).
 - **Stock Details**: Click on a stock in the list to view detailed information, including charts and technical indicators (e.g., moving averages, RSI).
-- **Session Management**: Store the list of selected stocks using session cookies, which persist while the tab is open and are automatically cleared when the session ends.
+- **Firebase Integration**: Stock data is stored in Firebase Firestore, ensuring persistent, real-time data storage and retrieval across sessions.
 - **Real-time Data**: Option to fetch live or delayed stock data (depending on API plan).
 
 ## Sample Ticker Symbols
@@ -30,7 +30,7 @@ The **Stock Analyzer Web App** is a simple, intuitive tool designed to help user
 - **Frontend**: React.js, Axios for API requests, React Bootstrap for UI components, and Chart.js (or Recharts) for displaying graphs.
 - **API**: Polygon.io Stock API. API Request limit: 5 requests per minute (free tier). Retrieves end-of-day stock data.
 - **State Management**: React's useState and useEffect hooks for managing UI state.
-- **Session Management**: Session cookies are used to store the user's stock list. This ensures the data remains intact during the session and is cleared when the browser or tab is closed.
+- **Database**: Firebase Firestore is used to store stock data in a persistent, real-time database, ensuring that data is available across sessions and devices.
 - **Environment Variables**: The .env file is used for securely storing sensitive data like API keys.
 
 
