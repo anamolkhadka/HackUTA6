@@ -7,7 +7,9 @@ import { useNavigate } from "react-router-dom";
 import Spinner from 'react-bootstrap/Spinner';  // Import spinner for loading indicator
 
 const API_URL = "https://api.polygon.io/v3/reference/tickers"
-const API_KEY = "19T3x8ImOxdXlhCqArDPanS2IIlSBDrG"
+//const API_KEY = "19T3x8ImOxdXlhCqArDPanS2IIlSBDrG"
+const API_KEY = process.env.REACT_APP_POLYGON_API_KEY;
+
 
 
 function Home({ search, setSearch, companies, addCompany, deleteCompany, loading}){
