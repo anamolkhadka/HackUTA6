@@ -1,0 +1,14 @@
+.custom {
+    background-color: #2c2c2c !important; /* Dark background */
+    color: #fff !important; /* Ensure the text is white */
+}
+
+/* Custom Tab Styles */
+.custom-tabs .nav-link {
+    color: #000 !important; /* Black text for inactive tabs */
+}
+
+.custom-tabs .nav-link:hover {
+    background-color: #2c2c2c !important; /* Dark background */
+    color: #fff !important; /* White text on hover */
+}

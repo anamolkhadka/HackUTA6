@@ -1,0 +1,22 @@
+.about-container {
+    background-color: #1c1c1c;
+    color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.about-container h1, 
+.about-container h2 {
+    color: #f0f0f0;
+}
+
+.about-container ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.about-container p, 
+.about-container li {
+    color: #d9d9d9;
+}
+  
